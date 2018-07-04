@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Adwaiz Invoice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <script src="jquery/jquery-ui.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.2/jspdf.plugin.autotable.min.js"></script>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div id="left" class="container">
+        <div class="input">
+            <div id="left">
+                <image src="adwaiz_logo_black.png"></image>
+            </div>
+
+
+            <div id="right">
+                <div id="left">
+                    <button id="center" onclick="createPDF(true)">Update preview</button>
+                </div>
+                <div id="right">
+                    <button id="center" onclick="createPDF(false)">Download</button>
+                </div>
+            </div>
+
+            <div id="left">
+                <h3>General</h3>
+                <div class="group">      
+                    <input id="name" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>[Name/Company/Social Media Handle]</label>
+                </div>
+
+                <div class="group">      
+                    <input id="address" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Address</label>
+                </div>
+
+                <div class="group">      
+                    <input id="phone" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Phone</label>
+                </div>
+
+                <div class="group">      
+                    <input id="email" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+            </div>
+
+            <div id="right">
+                <h3>Project</h3>
+                <div class="group">      
+                    <input id="invoice" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Invoice number</label>
+                </div>
+
+                <p>Date</p>
+                <input id="date">
+                
+                <p>Project info</p>
+                <textarea id="projectInfo" type="text" required rows="8"></textarea>
+
+                <div class="group">      
+                    <input id="projectContact" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Project contact</label>
+                </div>
+            </div>
+
+
+
+            <div id="left">
+                <h3>Footer</h3>
+                <div class="group">      
+                    <input id="bankName" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Bank name</label>
+                </div>
+                <div class="group">      
+                    <input id="accountNumber" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Account number</label>
+                </div>
+                <div class="group">      
+                    <input id="sortCode" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Sort code</label>
+                </div>
+            </div>
+
+        </div>
+
+        <h3>Table</h3>
+        <div id="table" class="table-editable">
+            <table id="tbl" class="table">
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th class="table-add glyphicon glyphicon-plus"></th>
+                </tr>
+                <tr>
+                    <td id="data_desc" contenteditable="true">Click to enter description</td>
+                    <td id="data_amt" contenteditable="true">Enter amount</td>
+                    <td> <span class="table-remove glyphicon glyphicon-remove"></span> </td>
+                </tr>
+                <!-- This is our clonable table line -->
+                <tr class="hide">
+                    <td id="data_desc" contenteditable="true">Click to enter description</td>
+                    <td id="data_amt" contenteditable="true">Enter amount</td>
+                    <td> <span class="table-remove glyphicon glyphicon-remove"></span> </td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <div id="right" class="container">
+        <iframe id="pdf_preview" type="application/pdf" src=""></iframe>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js'></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
