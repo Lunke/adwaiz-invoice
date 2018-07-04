@@ -37,12 +37,7 @@
         // Draw text at x,y
         this.text(txt,x,y);
     };
-/*
-    API.textWidth = function(txt) {
-	    var fontSize = this.internal.getFontSize();
-        return this.getStringUnitWidth(txt)*fontSize / this.internal.scaleFactor;
-    };
-*/
+
 
     API.getLineHeight = function(txt) {
         return this.internal.getLineHeight();
@@ -144,7 +139,7 @@ function createPDF(update) {
                 desc = cell.innerText;
             } else if (cell.id == "data_amt") {
                 amt += "£" + cell.innerText;
-                totalAmt += parseInt(amt);
+                totalAmt += parseInt(cell.innerText);
             }
         }
         if (desc != "" || amt != "") {

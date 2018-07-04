@@ -48,7 +48,7 @@ textarea {
 }
 
 #center {
-    margin:30px auto;
+    margin:30px auto 40px;
     display:block;
     background-color: #5264AE;
     width: 150px;
@@ -69,9 +69,6 @@ textarea {
     color: #5264AE;
 }
 
-.table-editable {
- // position: relative;
-}
 .table-editable .glyphicon {
   font-size: 20px;
 }
